@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Troy Goodin</title>
+<meta name="description" content="Homepage for Troy Goodin">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="headerShrink.js"></script>
+<style>
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    @font-face{
+        font-family: 'dukeFill';
+        src: url('dukeFill.otf');
+    }
+        body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: 'dukeFill';
+            letter-spacing: 1.5px;
+        }
+            header{
+                height: 200px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background-image: url(wood.png);
+                background-size: 500px;
+                box-shadow: 0 0 8px #000;
+                    position: relative;
+                        z-index: 2;
+            }
+                    nav#menu{
+                        width: 1000px;
+                        padding: 0;
+                        text-align: center;
+                            position: relative;
+                            top: 50%;
+                            margin: -24px auto 0 auto;
+                    }
+                        nav#menu ul{
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            display: -webkit-flex;
+
+                        }
+                            nav#menu ul li{
+                                margin: 0;
+                                padding: 0;
+                                font-size: 48px;
+                                line-height: 48px;
+                                list-style-type: nodd;
+                                    display: inline;
+                            }
+                                nav li:nth-child(1){
+                                    flex: 1;
+                                    -webkit-flex: 1;
+                                    -ms-flex: 1;
+                                }
+                                nav li:nth-child(2) {
+                                    flex: 2;
+                                    -webkit-flex: 2;
+                                    -ms-flex: 2;
+                                }
+
+                                nav li:nth-child(3) {
+                                    flex: 2;
+                                    -webkit-flex: 2;
+                                    -ms-flex: 2;
+                                }
+                                nav li:nth-child(4){
+                                    flex: 1;
+                                    -webkit-flex: 1;
+                                    -ms-flex: 1;
+                                }
+                                nav#menu ul li a{
+                                    text-decoration: none;
+                                    color: white;    
+                                }
+                                    nav#menu ul li a:hover{
+                                        color: rgb(215, 215, 215);
+                                        border-bottom: solid rgb(215, 215, 215) 3px;
+                                    }
+            .odd{
+                height: 800px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                z-index: 0;
+                    position: relative;
+            }
+                .odd>a{
+                    height: 100px;
+                    width: 250px;
+                    border: solid 5px white;
+                    transition: all .5s;
+                    -webkit-transition: all .5s;
+                    -moz-transition: all .5s;
+                    text-align: center;
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -125px;
+                        top: 50%;
+                        margin-top: -50px;
+                }
+                    .odd>a:hover{
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                            margin-left: -100px;
+                            margin-top:  -100px;
+                    }
+                    .odd>a>h1{
+                        height: 48px;
+                        width: 142px;
+                        margin: 0;
+                        padding: 0;
+                        transition: all .5s;
+                        -webkit-transition: all .5s;
+                        -moz-transition: all .5s;
+                        color: white;
+                        font-size: 48px;
+                        line-height: 48px;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -72px;
+                            top: 50%;
+                            margin-top: -24px;
+                    }
+                        .odd>article:hover h1{
+                            transition: all .5s;
+                            -webkit-transition: all .5s;
+                            -moz-transition: all .5s;
+                            
+                        }
+            .even{
+                height: 600px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                background-image: url(pattern4.png);
+                background-size: 50%;
+                box-shadow: 0 0 5px #000;
+                    position: relative;
+                        z-index: 1;
+            }
+                .even>article{
+                    height: 400px;
+                    width: 250px;
+                    margin: 50px;
+                    background-color: rgba(100, 100, 100, .25);
+                    color: rgb(255, 255, 255);
+                    display: inline-block;
+                        
+                }
+                    .even>article.left{
+                       
+                    }
+                    .even>article.middle{
+                        
+                    }
+                    .even>article.right{
+                        
+                    }
+                    .even>article>p{
+                        margin: 0;
+                        padding: 0;
+                        line-height: 400px;
+                        font-size: 32px
+                    }
+            section#one{
+                background-image: url(troy.png);
+            }
+            section#three{
+                background-image: url(troy4_edited-2.jpg);
+            }
+            section#five{
+                background-image: url(troy3.jpg);
+            }
+            section#seven{
+                background-image: url(troy10_edited-1.jpg);
+            }
+        footer{
+            height: 400px;!important
+        }
+            footer>h1{
+                width: 406px;
+                color: white;
+                font-size: 72px;
+                text-decoration: underline;
+                position: absolute;
+                left: 50%;
+                margin-left: -203px;
+            }
+            
+</style>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="">RESUME</a></li>
+                <li><a href="">PROJECTS</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="one" class="odd">
+        <a href="#about">
+            <h1 id="about">ABOUT ME</h1>
+        </a> 
+    </section>
+    <section id="two" class="even">
+        <article class="left" class="one"><p>Hello</p></article>
+        <article class="middle"><p>Hello</p></article>
+        <article class="right"><p>Hello</p></article>
+    </section>
+    <section id="three" class="odd">
+        <a href="#resume">
+            <h1 id="resume">RESUME</h1>
+        </a>
+    </section>
+    <section id="four" class="even">
+        <article class="left"><p>Hello</p></article>
+        <article class="middle"><p>Hello</p></article>
+        <article class="right"><p>Hello</p></article>
+    </section>
+    <section id="five" class="odd">
+        <a href="#projects">
+            <h1 id="projects">PROJECTS</h1>
+        </a> 
+    </section>
+    <section id="six" class="even">
+        <article class="left"><p>Previous Website</p></article>
+        <article class="middle"><p>Game</p></article>
+        <article class="right"><p>Hello</p></article>
+    </section>
+    <section id="seven" class="odd">
+        <a href="#contact">
+            <h1 id="contact">CONTACT</h1>
+        </a>
+    </section>
+    <section id="eight" class="even">
+        <article class="left"><p>Address</p></article>
+        <article class="middle"><p>Phone</p></article>
+        <article class="right"><p>Email</p></article>
+    </section>
+    <footer class="odd">
+        <h1>THANKS FOR VISITING</h1>
+    </footer>
+</body>
+</html>
