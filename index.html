@@ -147,24 +147,25 @@
                             
                         }
             .even{
-                height: 600px;
                 width: 100%;
                 margin: 0;
                 padding: 0;
                 text-align: center;
-                background-image: url(pattern4.png);
+                background-color: rgb(223, 224, 225);
                 background-size: 50%;
-                box-shadow: 0 0 5px #000;
+                box-shadow: 0 0 10px #000;
                     position: relative;
-                        z-index: 1;
             }
                 .even>article{
                     height: 400px;
                     width: 250px;
                     margin: 50px;
-                    background-color: rgba(100, 100, 100, .25);
-                    color: rgb(255, 255, 255);
+                    padding: 0;
+                    line-height: 400px;
+                    vertical-align: bottom;
+                    background-color: rgb(249, 250, 251);
                     display: inline-block;
+                
                         
                 }
                     .even>article.left{
@@ -178,9 +179,12 @@
                     }
                     .even>article>p{
                         margin: 0;
-                        padding: 0;
-                        line-height: 400px;
-                        font-size: 32px
+                        padding: 10px;
+                        vertical-align: top;
+                        line-height: 32px;
+                        font-size: 30px;
+                        color: rgb(99, 100, 101);
+                        display: inline-block;
                     }
             section#one{
                 background-image: url(troy.png);
@@ -194,41 +198,28 @@
             section#seven{
                 background-image: url(troy10_edited-1.jpg);
             }
-        footer{
-            height: 400px;!important
-        }
-            footer>h1{
-                width: 406px;
-                color: white;
-                font-size: 72px;
-                text-decoration: underline;
-                position: absolute;
-                left: 50%;
-                margin-left: -203px;
-            }
-            
 </style>
 </head>
 <body>
     <header>
         <nav id="menu">
             <ul>
-                <li><a href="index.html">ABOUT</a></li>
-                <li><a href="">RESUME</a></li>
-                <li><a href="">PROJECTS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#resume">RESUME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <section id="one" class="odd">
         <a href="#about">
-            <h1 id="about">ABOUT ME</h1>
+            <h1 id="about">ABOUT</h1>
         </a> 
     </section>
     <section id="two" class="even">
-        <article class="left" class="one"><p>Hello</p></article>
-        <article class="middle"><p>Hello</p></article>
-        <article class="right"><p>Hello</p></article>
+        <article class="left"><p>I am from  Kenton, Ohio. It's about an hour and a half away from Columbus. I graduated from Kenton High School with honors and a GPA of 3.9.</p></article>
+        <article class="middle"><p>I am currently a freshman at the University of Illinois (Urbana-Champaign). I am majoring in Computer Science. I live in Blaisdell Hall of Pennsylvania Avenue Residence</p></article>
+        <article class="right"><p>In high school I played on the tennis team and was the captain for the last  </p></article>
     </section>
     <section id="three" class="odd">
         <a href="#resume">
@@ -246,9 +237,9 @@
         </a> 
     </section>
     <section id="six" class="even">
-        <article class="left"><p>Previous Website</p></article>
-        <article class="middle"><p>Game</p></article>
-        <article class="right"><p>Hello</p></article>
+        <article class="left"><p>Previous Websites:<br><br><a>github.com/tagboy07/previousWebsite</a></p></article>
+        <article class="middle"><p>Jumping Game:<br><br><a>github.com/tagboy07/jumpingGame</a></p></article>
+        <article class="right"><p>Cave Game:<br><br><a>github.com/CaveExporerStudio/ProjectDarkZone</a></p></article>
     </section>
     <section id="seven" class="odd">
         <a href="#contact">
@@ -256,12 +247,9 @@
         </a>
     </section>
     <section id="eight" class="even">
-        <article class="left"><p>Address</p></article>
-        <article class="middle"><p>Phone</p></article>
-        <article class="right"><p>Email</p></article>
+        <article class="left"><p>Address:<br><br>901 W. Pennsylvania Ave<br> Blaisdell Hall 0015B<br> Urbana, IL 61801</p></article>
+        <article class="middle"><p>Phone:<br><br>567-674-9162</p></article>
+        <article class="right"><p>Email:<br><br>tagboy07@gmail.com<br>OR<br>goodin2@illinois.edu</p></article>
     </section>
-    <footer class="odd">
-        <h1>THANKS FOR VISITING</h1>
-    </footer>
 </body>
 </html>
