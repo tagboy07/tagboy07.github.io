@@ -6,7 +6,7 @@ $(window).scroll(function(){
     var $nav = $('header');
     if ($('body').scrollTop() > 68) {
         if ($nav.data('height') == 'big') {
-            $nav.data('height','small').stop().css("height", "72px");
+            $nav.data('height','small').stop().css("height", "100px");
             $('header').css("position", "fixed");
         }
     } else {
