@@ -10,9 +10,11 @@ $(window).scroll(function(){
             $('header').css("position", "fixed");
         }
     } else {
+		
         if ($nav.data('height') == 'small') {
             $nav.data('height','big').stop().css("height", "200px");
             $('header').css("position", "relative");
+			window.scrollTo(0,0);
         }  
     }
 });

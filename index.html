@@ -13,7 +13,6 @@
 body{
 	height: 100%;
 	width: 100%;
-	min-width: 1000px;
 	margin: 0;
 	padding: 0;
 	background-color: black;
@@ -138,7 +137,6 @@ nav#menu ul li a:hover{
 }
     
 .info{
-	height: 500px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -153,21 +151,21 @@ nav#menu ul li a:hover{
 	background-image: url(troy.png);
 }
 
+	#about_info{
+		padding: 122px 0;
+		text-align: center;
+	}
 #about_info>p{
 	height: 256px;
 	width: 800px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	text-align: left;
 	line-height: 32px;
 	font-size: 30px;
 	color: rgb(99, 100, 101);
-	position: absolute;
-	top: 50%;
-	margin-top: -128px;
-	left: 50%;
-	margin-left: -400px;
 	background-color: rgb(250, 250, 250);
+
 }
     
 #resume_image{
@@ -175,14 +173,11 @@ nav#menu ul li a:hover{
 }
     
 #resume_info p{
+	margin: 0;
+	padding 0;
 	height: 500px;
 	width: 300px;
 	background-color: rgba(0,0,0,0);
-	position: absolute;
-	top: 50%;
-	margin-top: -250px;
-	left: 50%;
-	margin-left: -150px;
 }
     
 #resume_info a{
@@ -290,6 +285,59 @@ nav#menu ul li a:hover{
 #contact_info{
 	height: 100px;
 }
+#icon_wrapper{
+	height: 75px;
+	width: 375px;
+	margin: 0;
+	padding: 0;
+	line-height: 75px;
+
+	position: absolute;
+	top: 50%;
+	margin-top: -36px;
+	left: 50%;
+	margin-left: -188px;
+}
+.icon{
+	height: 75px;
+	width: 75px;
+	line-height: 75px;
+	margin: 0 20px;
+	padding: 0;
+	border-radius: 50%;
+	background-size: 75px;
+	display: inline-block;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+}
+#email{
+	background-image: url(email.png);
+}
+#email:hover{
+	background-image: url(email_hover.png);
+}
+#email:active{
+	background-image: url(email_active.png);
+}
+#github{
+	background-image: url(github.png);
+}
+#github:hover{
+	background-image: url(github_hover.png);
+}
+#github:active{
+	background-image: url(github_active.png);
+}
+#linkedin{
+	background-image: url(linkedin.png);
+}
+#linkedin:hover{
+	background-image: url(linkedin_hover.png);
+}
+#linkedin:active{
+	background-image: url(linkedin_active.png);
+}
             
 </style>
 </head>
@@ -311,7 +359,7 @@ nav#menu ul li a:hover{
     </div>
     
     <div id="about_info" class="info">
-        <p>I am from  Kenton, Ohio. It's about an hour and a half away from Columbus. I graduated from Kenton High School with honors and a GPA of 3.9.I am currently a freshman at the University of Illinois (Urbana-Champaign). I am majoring in Computer Science. I live in Blaisdell Hall of Pennsylvania Avenue Residence. In high school I played on the tennis team and was the captain for the last 2 years</p>
+        <p>I am from  Kenton, Ohio. It's about an hour and a half away from Columbus. I am currently a sophomore at the University of Illinois (Urbana-Champaign) and I'm majoring in Computer Science. In high school I played on the tennis team and was the captain for the last 2 years.</p>
     </div>
     
     <div id="resume_image" class="image">
@@ -357,7 +405,11 @@ nav#menu ul li a:hover{
     </div>
     
     <div id="contact_info" class="info">
-        
+        <div id="icon_wrapper">
+			<a href="https://mail.google.com/mail/?view=cm&fs=1&to=tagboy07@gmail.com" id="email" class="icon"></a>
+			<a href="https://github.com/tagboy07" id="github" class="icon"></a>
+			<a href="https://linkedin.com/in/troy-goodin-9b1609133" id="linkedin" class="icon"></a>
+		</div>
     </div>
 </body>
 </html>
