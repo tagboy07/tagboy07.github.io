@@ -21,18 +21,16 @@ body{
 }
     
 header{
-	height: 200px;
+	height: 100px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background-image: url(wood.png);
-	background-size: 500px;
-	background-color: red;
+	background-color: rgb(79, 93, 115);
 	box-shadow: 0 0 8px #000;
-	-webkit-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0px 0 10px #000;
 	-mox-box-shadow: 0 0 8px #000;
-	position: relative;
 	z-index: 2;
+	position: fixed;
 }
     
 nav#menu{
@@ -47,19 +45,19 @@ nav#menu{
     
 nav#menu ul{
 	height: 44px;
-	width: 1000px;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	top: 50%;
 	margin-top: -22px;
 	left: 50%;
-	margin-left: -500px;
+	transform: translateX(-50%);
 	
 }
     
 nav#menu ul li{
-	margin: 15px;
+	margin: 10px;
 	padding: 0;
 	font-size: 44px;
 	line-height: 44px;
@@ -103,7 +101,7 @@ nav#menu ul li a:hover{
 	margin-left: -125px;
 	top: 50%;
 	margin-top: -50px;
-	background-color: rgba(0,0,0, .5);
+	background-color: rgba(0,0,0, .4);
 }
     
 .image>a:hover{
@@ -112,6 +110,10 @@ nav#menu ul li a:hover{
 	border-radius: 50%;
 	margin-left: -100px;
 	margin-top:  -100px;
+	background-color: rgba(0,0,0, .6);
+}
+.image>a:active{
+	background-color: rgba(0,0,0, .8);
 }
     
 .image>a>h1{
@@ -145,20 +147,21 @@ nav#menu ul li a:hover{
 	background-image: url(geometry.png);
 	background-size: 350px;
 	text-align: center;
-	box-shadow: 0 0 10px #000;
-	-webkit-box-shadow: 0 0 10px #000;
-	-mox-box-shadow: 0 0 10px #000;
+	box-shadow: -10px 0 10px #000;
+	-webkit-box-shadow: -10px 0 10px #000;
+	-mox-box-shadow: -10px 0 10px #000;
 	position: relative;
+	z-index: 1;
 }
     
 #about_image{
 	background-image: url(troy.png);
 }
 
-	#about_info{
-		padding: 122px 0;
-		text-align: center;
-	}
+#about_info{
+	padding: 122px 0;
+	text-align: center;
+}
 #about_info>p{
 	height: 256px;
 	width: 800px;
@@ -248,12 +251,11 @@ nav#menu ul li a:hover{
 .project{
 	height: 500px;
 	width: 300px;
-	margin: 0 30px;
+	margin: 20px 30px 0 30px;
 	padding: 0;
 	display: inline-flex;
 	position: relative;
-	transform-style: preserve-3d;
-    transition: all 1.0s linear;
+	background-color: rgba(245, 245, 245, .3)
 }
 .face_wrapper{
 	height: 150px;
@@ -263,16 +265,17 @@ nav#menu ul li a:hover{
 	-webkit-box-shadow: 0 0 10px #000;
 	-mox-box-shadow: 0 0 10px #000;
 	transform-style: preserve-3d;
-	transition: all 1.0s linear;
+	transition: all .3s ease;
 	display: inline-flex;
 	position: absolute;
+	top: 20px;
 	left: 50%;
 	margin-left: -75px;
 }
 
 .face{
-	height: 150px;
-	width: 150px;
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	font-size: 24px;
@@ -281,6 +284,7 @@ nav#menu ul li a:hover{
 	background-color: rgb(79, 93, 115);
 	text-decoration: none;
 	backface-visibility: hidden;
+	position: absolute;
 }
 .face_wrapper:hover {
 	transform: rotateY(180deg);
@@ -290,15 +294,22 @@ nav#menu ul li a:hover{
 } 
 .face.back{
 	position: absolute;
-	display: block;
+	display: table;
 	transform: rotateY(180deg);
 	backface-visibility: visible;
 }
+.face.back>p{
+	color: white;
+	font-size: 28px;
+	font-style: italic;
+	display: table-cell;
+	vertical-align: middle;
+}
 	
-#projects_info p{
+#projects_info>div>p{
 	width: 300px;
 	margin: 200px 0 0 0;
-	font-size: 20px;
+	font-size: 22px;
 	padding: 20px 0;
 	display: relative;
 }
@@ -412,27 +423,27 @@ nav#menu ul li a:hover{
 				<a class="front face" href="github.com/tagboy07/previouswebsite">
 					<img style="width: 150px; height: 150px;" src="sites.png"/>
 				</a>
-				<a class="back face center"><img style="width: 150px; height: 150px;" src="linkedin.png"/></a>
+				<a class="back face center"><p>Previous Websites</p></a>
 			</div>
-			<p>This is a description of my previous websites. Hopefully you are able to see the progression of my skills. I designed most of these websites in college. I started this website in high school too but have came back to it over time to make it better.</p>
+			<p>I designed most of these websites in high scholl including this one but I have came back to it over time to improve it. Hopefully you are able to see the progression of my skills. </p>
 		</div>
         <div class="project">
 			<div class="face_wrapper">
 				<a class="front face" href="github.com/tagboy07/previouswebsite">
 					<img style="width: 120px; height: 120px; padding: 15px 0;" src="controller.png"/>
 				</a>
-				<a class="back face center"><img style="width: 150px; height: 150px;" src="linkedin.png"/></a>
+				<a class="back face center"><p>Cave Game</p></a>
 			</div>
-			<p>This was a project I worked on for my CS 125 honors course. I was lead developer of the "Overworld" and title screen. We used Unity and C# to create the game.</p>
+			<p>This was a project I worked on for my CS 125 honors course (CS 196). I was the lead developer of the "Overworld" and title screen. We used Unity and C# to create the game.</p>
 		</div>
         <div class="project">
 			<div class="face_wrapper">
 				<a class="front face" href="github.com/tagboy07/previouswebsite">
 					<img style="width: 150px; height: 150px;" src="pawn.png"/>
 				</a>
-				<a class="back face center"><img style="width: 150px; height: 150px;" src="linkedin.png"/></a>
+				<a class="back face center"><p>Chess Project</p></a>
 			</div>
-			<p>This is a description of my chess project. I made this using processing.</p>
+			<p>This is a chess application that I made during my sophomore year winter break. I used the processing IDE and language to develop the project.</p>
 		</div>
     </div>
     
