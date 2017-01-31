@@ -29,6 +29,8 @@ header{
 	background-size: 500px;
 	background-color: red;
 	box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	-mox-box-shadow: 0 0 8px #000;
 	position: relative;
 	z-index: 2;
 }
@@ -144,6 +146,8 @@ nav#menu ul li a:hover{
 	background-size: 350px;
 	text-align: center;
 	box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	-mox-box-shadow: 0 0 10px #000;
 	position: relative;
 }
     
@@ -241,42 +245,62 @@ nav#menu ul li a:hover{
 	background-image: url(troy3.jpg);
 }
 	
-#projects_info{
-	height: auto;
-}
-#projects_info div{
+.project{
 	height: 500px;
 	width: 300px;
 	margin: 0 30px;
 	padding: 0;
-	background-color: rgb(250, 250, 250);
-	display: inline-block;
+	display: inline-flex;
+	position: relative;
+	transform-style: preserve-3d;
+    transition: all 1.0s linear;
 }
-
-#projects_info h3{
+.face_wrapper{
 	height: 150px;
 	width: 150px;
-	padding: 0;
 	border-radius: 50%;
-	background-color: red;
-	margin: 10px 75px;
-	display: table;
+	box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	-mox-box-shadow: 0 0 10px #000;
+	transform-style: preserve-3d;
+	transition: all 1.0s linear;
+	display: inline-flex;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
 }
-#projects_info a{
-	height: 100px;
-	width: 100px;
+
+.face{
+	height: 150px;
+	width: 150px;
 	margin: 0;
 	padding: 0;
 	font-size: 24px;
+	border-radius: 50%;
 	color: black;
+	background-color: rgb(79, 93, 115);
 	text-decoration: none;
-	display: table-cell;
-	vertical-align: middle;
+	backface-visibility: hidden;
 }
+.face_wrapper:hover {
+	transform: rotateY(180deg);
+	-webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+} 
+.face.back{
+	position: absolute;
+	display: block;
+	transform: rotateY(180deg);
+	backface-visibility: visible;
+}
+	
 #projects_info p{
+	width: 300px;
+	margin: 200px 0 0 0;
 	font-size: 20px;
 	padding: 20px 0;
-	display: table-cell;
+	display: relative;
 }
     
 #contact_image{
@@ -336,7 +360,7 @@ nav#menu ul li a:hover{
 	background-image: url(linkedin_hover.png);
 }
 #linkedin:active{
-	background-image: url(linkedin_active.png);
+	background-image: url(linkedin_activev.png);
 }
             
 </style>
@@ -383,17 +407,32 @@ nav#menu ul li a:hover{
     
 	
     <div id="projects_info" class="info">
-        <div class="left"> 
-			<h3><a href="github.com/tagboy07/previouswebsite">Previous Websites</a></h3>
+        <div class="project">
+			<div class="face_wrapper">
+				<a class="front face" href="github.com/tagboy07/previouswebsite">
+					<img style="width: 150px; height: 150px;" src="sites.png"/>
+				</a>
+				<a class="back face center"><img style="width: 150px; height: 150px;" src="linkedin.png"/></a>
+			</div>
 			<p>This is a description of my previous websites. Hopefully you are able to see the progression of my skills. I designed most of these websites in college. I started this website in high school too but have came back to it over time to make it better.</p>
 		</div>
-        <div class="middle">
-			<h3><a href="github.com/tagboy07/jumpinggame">Chess</a></h3>
-			<p>This is a description of my chess project. I made this using processing.</p>
-		</div>
-        <div class="right">
-			<h3><a href="https://github.com/CaveExplorerStudio/ProjectDarkZone">Cave Game</a></h3>
+        <div class="project">
+			<div class="face_wrapper">
+				<a class="front face" href="github.com/tagboy07/previouswebsite">
+					<img style="width: 120px; height: 120px; padding: 15px 0;" src="controller.png"/>
+				</a>
+				<a class="back face center"><img style="width: 150px; height: 150px;" src="linkedin.png"/></a>
+			</div>
 			<p>This was a project I worked on for my CS 125 honors course. I was lead developer of the "Overworld" and title screen. We used Unity and C# to create the game.</p>
+		</div>
+        <div class="project">
+			<div class="face_wrapper">
+				<a class="front face" href="github.com/tagboy07/previouswebsite">
+					<img style="width: 150px; height: 150px;" src="pawn.png"/>
+				</a>
+				<a class="back face center"><img style="width: 150px; height: 150px;" src="linkedin.png"/></a>
+			</div>
+			<p>This is a description of my chess project. I made this using processing.</p>
 		</div>
     </div>
     
